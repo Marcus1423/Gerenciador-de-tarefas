@@ -6,7 +6,7 @@ function Header() {
      const { theme, toggleTheme } = useContext(ThemeContext);
     return (
         <nav>
-            <div className="flex justify-around">
+            <div className="flex flex-wrap justify-around">
                 <NavLink to="/" className="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Home</NavLink>
                 <NavLink to="/projects" className="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Projects</NavLink>
                 <NavLink to="/completed" className="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Conpleted</NavLink>
