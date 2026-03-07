@@ -21,7 +21,7 @@ function withPremiumAccess(Component) {
 
           <button
             onClick={() => navigate("/upgrade")}
-            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg"
+            className="px-4 mt-2.5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg"
           >
             Fazer Upgrade
           </button>

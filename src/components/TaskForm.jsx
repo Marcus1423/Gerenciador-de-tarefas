@@ -49,7 +49,7 @@ function TaskForm({ projectId = null }) {
       <textarea
         placeholder="Descrição (opcional)"
         {...register("description")}
-        className="sm:w-3xs md:w-2xl dark:bg-slate-800 border dark:text-slate-100 border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 outline-none px-4 py-2 rounded-xl transition"
+        className="sm:w-3xs md:w-2xl dark:bg-slate-800 border dark:text-slate-100 border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 outline-none px-4 py-2 rounded-xl transition placeholder-gray-400 dark:placeholder-slate-400"
       />
 
       {/* Categoria */}
