@@ -18,7 +18,9 @@ function TaskItem({ task }) {
         {task.title}
       </span>
 
-      {/* Botão excluir */}
+      <button onClick={() => toggleTask(task.id)} className="bg-green-800/10 text-green-600 hover:bg-green-500/20 px-3 py-1 rounded-lg transition">
+        Concluir
+      </button>
       <button onClick={() => removeTask(task.id)} className="bg-red-500/10 text-red-400 hover:bg-red-500/20 px-3 py-1 rounded-lg transition">
         Remover
       </button>

@@ -13,18 +13,29 @@ useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-  function addTask(title, projectId = null) {
-    if (title.trim() === "") return;
+  function addTask(data, projectId = null) {
 
     setTasks(prev => [
       ...prev,
       { 
-        id: Date.now(), 
-        title,
-        completed: false,
-        projectId
+        id: Date.now(),
+      title: data.title,
+      description: data.description,
+      category: data.category,
+      completed: false,
+      projectId
        }
     ]);
+  }
+
+  function toggleTask(id) {
+    setTasks(prev =>
+      prev.map(task =>
+        task.id === id
+          ? { ...task, completed: !task.completed }
+          : task
+      )
+    );
   }
 
   function removeTask(id) {
@@ -32,7 +43,7 @@ useEffect(() => {
   }
 
   return (
-    <TaskContext.Provider value={{tasks, addTask, removeTask}}>
+    <TaskContext.Provider value={{tasks, addTask, removeTask, toggleTask}}>
         { children }
     </TaskContext.Provider>
   )
